@@ -1,0 +1,6 @@
+## 1. Explain the relationship between the "Product" and "Product_Category" entities from the above diagram.
+
+### The relationship between the "Product" and "Product_Category" entities from the diagram you provided is a many-to-many relationship. In a many-to-many relationship, each record in one entity (in this case, "Product") can be related to multiple records in another entity ("Product_Category"), and vice versa. This means that a product can belong to multiple categories, and a category can contain multiple products. To represent a many-to-many relationship in a relational database, a junction table (also known as an associative table or link table) is typically used. In this case, the "Product_Category" table serves as the junction table.
+
+## 2. How could you ensure that each product in the "Product" table has a valid category assigned to it?
+### To ensure that each product in the "Product" table has a valid category assigned to it, we can implement a foreign key constraint between the "Product" table and the "Category" table in our database schema. This constraint will enforce referential integrity, meaning that every value in the "category_id" column of the "Product" table must exist in the "id" column of the "Category" table.
