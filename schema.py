@@ -53,9 +53,3 @@ class Category(Base):
 
     # Define the many-to-many relationship with Product
     products = relationship("Product", secondary=product_category_association, back_populates="categories")
-
-# Create an engine to connect to your database
-engine = create_engine('sqlite:///example.db')
-
-# Create the tables
-Base.metadata.create_all(engine)
